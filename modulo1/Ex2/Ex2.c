@@ -1,16 +1,5 @@
 #include <stdio.h>
-
-int main(void)
-{
-	int vec[20];
-	fill_vec(vec,20);
-	for (int i = 0; i < 21; i++)
-	{
-		printf("%d\n", vec[i]);
-	}		
-	return 0;
-}
-
+#include "Ex2.h"
 
 
 void fill_vec(int *vec,int n)
