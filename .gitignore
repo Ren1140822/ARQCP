@@ -1,33 +1,13 @@
-#Ignore 
-all
+#Ignore all
 *
-#
-Unignore
-files 
-named
-Makefile
-and
-makefile
-!
-Makefile
-!
-makefile
-#
-Unignore
-all
-with
-extensions
+#Unignore files named Makefile and makefile
+!Makefile
+!makefile
+#Unignore all with extensions
 !*.*
-#
-Unignore
-all
-directories
+#Unignore all directories
 !*/
-#Ignore 
-geany
-script
+#Ignore geany script
 geany_run_script.sh
-#Ignore 
-object
-files
+#Ignore object files
 *.o
