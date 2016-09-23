@@ -19,17 +19,18 @@ char *where_exists(char *str1,char *str2)
 					if(*(str1+i)==*(str2+j))
 					{
 						//we need two cycles, letters may not be in the same index
-						//debug :printf("%c == %c",*(str1+i),*(str2+j));
+						printf("%c\n",*(str1+i));//just to show that i can find the entire word
+						
+						if(boolean ==0){
 						ptr=(str2+j);
-						return ptr; 					
+						 boolean=1;	
+						}	
+						break;		
 					}
 					
-				}
-				
-			
-				
+				}								
 			}
 		}						
 	}	
-	return NULL;	
+	return ptr;
 }
