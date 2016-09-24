@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "asm.h"
 
-int res=0, num=10;
+unsigned int res=0, num=10;
 int main(void)
 {
 	res=getFibonacci();
