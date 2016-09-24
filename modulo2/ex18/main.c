@@ -6,5 +6,5 @@ int num=12;
 int main(void)
 {
 	res=getFactorial();
-	printf("%lld\n",res);
+	printf("Factorial is %lld.\n",res);
 }
