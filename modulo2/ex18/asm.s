@@ -18,7 +18,7 @@ cycle:
 
 subl $1,num		#subs 1 to num ,to get the previous factorial term
 movl num,%ebx	#moves the subtracted num to ebx
-mul %ebx	#multiplicates ebx by eax
+mul %ebx		#multiplicates ebx by eax
 movl num,%ecx	#moves num to ecx to compare, this could be avoided, just to organize registers with one purpose
 cmp $1,%ecx		#while ecx!=1
 jne cycle

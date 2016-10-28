@@ -2,7 +2,7 @@
 #include "asm.h"
 
 long long int res=0;
-int num=12;
+int num=4;
 int main(void)
 {
 	res=getFactorial();
