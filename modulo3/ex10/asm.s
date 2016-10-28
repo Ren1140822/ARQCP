@@ -25,8 +25,8 @@ jmp strcpy1
 strcpy1:
 cmpl $0,%ecx		#compares 0 with nr of iterations
 jz strcpy2
-movb (%esi),aux
-movb  aux,(%edx)
+movb (%esi),%bl
+movb  %bl,(%edx)
 addl $1,%esi
 addl $1,%edx
 subl $1,%ecx		#subs 1 from cycle
@@ -36,8 +36,8 @@ jmp strcpy1		#enter cycle
 strcpy2:
 cmpl $0,%eax		#compares 0 with nr of iterations
 jz end
-movb (%edi),aux
-movb  aux,(%edx)
+movb (%edi),%bl
+movb  %bl,(%edx)
 addl $1,%edi
 addl $1,%edx
 subl $1,%eax		#subs 1 from cycle

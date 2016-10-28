@@ -16,7 +16,7 @@ int main(void)
 	str_concat();
 	
 	int i;
-	for (i = 0; i <81 ; i++)
+	for (i = 0; i <80 ; i++)
 	{
 		printf("%c\n",vec3[i]);
 	}
