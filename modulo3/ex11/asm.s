@@ -1,41 +1,38 @@
 .section .data
-.global ptr
-.global value
+.global ptr1
 
 
-.global vec_search #short vec_search(void)
 
+.global vec_greater10 #void vec_greater10(void)
 
-vec_search:
+vec_greater10:
 # prologue
 pushl %ebp      # save previous stack frame pointer
 movl %esp, %ebp  # the stack frame pointer
 movl $0,%eax
 movl $0,%edx
-movl ptr,%esi		#pointer storage
-movw value,%bx		#nr to look for
-movl (%esi),%ecx	#nr of iterations
-jmp increment
+movl ptr1,%esi	#pointer to esi
 
-increment:
+	
+movl (%esi),%ecx	#nr of iterations
+
+jmp cycle
+
+cycle:
 cmpl $0,%ecx		#compares 0 with nr of iterations
 jz end
-addl $2,%esi		#next short
-movw  (%esi),%dx	#moves short at that index to dx
-cmpw %bx,%dx		#compares that nr with number to look for
-jz found
+addl $4,%esi		#next number
+
+cmp $10,(%esi)		#compares with 10
+jge increment		#if >= 10
 subl $1,%ecx		#subs 1 from cycle
-jmp increment		#enter cycle
+jmp cycle			#enter cycle
 
 
-
-found:
-movl %esi,%eax		#moves memory address
-jmp end
-
-
-
-
+increment:
+addl $1,%eax		#increments value
+subl $1,%ecx		#subs 1 to cycle
+jmp cycle
 end:
 
 

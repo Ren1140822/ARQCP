@@ -5,7 +5,7 @@
 short vec[] = {4,2,3,4,5};
 short *ptr = vec;
 short res=0;
-short value = 5;
+short value = 3;
 int main(void)
 {
 	
@@ -13,7 +13,7 @@ int main(void)
 	res= vec_search();
 	
 	
-	printf("%d\n",res);
+	printf("%p\n",res);
 
 	
 	
