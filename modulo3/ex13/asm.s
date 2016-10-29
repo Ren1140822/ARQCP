@@ -24,7 +24,7 @@ jz end
 addl $4,%esi		#next number
 addl $1,%eax		#current index
 cmpl $0,(%esi)	 	#compares with 0
-jle change			#if <0
+jl change			#if <0
 subl $1,%ecx		#subs 1 from cycle
 jmp cycle			#enter cycle
 
