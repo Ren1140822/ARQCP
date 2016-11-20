@@ -1,11 +1,11 @@
 OBJFILES = somaC.o somaS.o main.o
-PROGRAM = ex10
+PROGRAM = ex18
 
 .SUFFIXES: .s .c .o
 .s.c.o:
 	gcc -Wall -c $<
 	
-ex10: ${OBJFILES}
+ex18: ${OBJFILES}
 	gcc -Wall ${OBJFILES} -o ${PROGRAM}
 		
 	

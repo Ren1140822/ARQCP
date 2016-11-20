@@ -17,7 +17,7 @@ changes_vec:
 	pushl %ecx #Para evitar alteraçoes , guarda se o valor de ecx na stack
 	pushl %edx #Guarda se o valor de edx na stack ( pois sera usado como parametro )
 	
-	call changes #Faz se call aá funçao changes
+	call changes #Faz se call á funçao changes
 	
 	popl %edx #O valor de edx é restaurado
 	popl %ecx #O valor de ecx é restaurado
