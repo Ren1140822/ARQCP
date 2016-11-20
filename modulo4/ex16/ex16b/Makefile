@@ -1,17 +1,17 @@
-OBJFILES = join_bits.o main.o
-PROGRAM = ex14a
+OBJFILES = changes.o main.o 
+PROGRAM = ex16b
 
 .SUFFIXES: .s .c .o
 .s.c.o:
 	gcc -Wall -c $<
 	
-ex14a: ${OBJFILES}
+ex16b: ${OBJFILES}
 	gcc -Wall ${OBJFILES} -o ${PROGRAM}
 		
-calculate.o: join_bits.c join_bits.h	
+changes.o: changes.s changes.h	
 	gcc -Wall -c -g $<
-		
-main.o: main.c join_bits.h
+	
+main.o: main.c changes.h
 	gcc -Wall -c -g $<
 	
 run: ${PROGRAM}
