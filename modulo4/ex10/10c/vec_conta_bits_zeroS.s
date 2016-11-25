@@ -17,11 +17,15 @@ vec_conta_bits_zeroS:
 	ciclo:
 		cmpl %ebx, 12(%ebp)				#condiçao de paragem
 		je end
+		pushl %ebx
+		pushl %esi
 		pushl (%esi)					#coloca na stack o valor a ser usado na proxima call
 		call conta_bits_zeroS			#call a funçao conta_bits_zeroS
-		addl $4, %esp					#apaga o valor anterior da stack
+		popl %esi
+		popl %esi	
+		popl %ebx				#apaga o valor anterior da stack
 		addl %eax, %edx					#adiciona o numero de bits retornado no call a edx
-		incl %esi						#next pos vetor
+		addl $4,%esi						#next pos vetor
 		incl %ebx						#contador ++
 		jmp ciclo
 		
