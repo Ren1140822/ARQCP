@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "sum_matrixes.h"
 
-void imprimirMatriz(int ** matriz, int y, int k);
+void imprimir_matriz(int ** matriz, int y, int k);
 
 int main(void){
 	
